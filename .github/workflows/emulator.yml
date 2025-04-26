@@ -36,7 +36,7 @@ jobs:
           ccache -s
           find objs/distribution/emulator -type f -exec sh -c "file {} | grep -Pi ': elf (32|64)-bit' > /dev/null" \; -print | xargs llvm-strip --strip-all
       - name: upload
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: emulator
           path: |

@@ -15,8 +15,8 @@ jobs:
           ccache -o hard_link=true
       - name: download
         run: |
-          git config --global user.email "you@example.com"
-          git config --global user.name "Your Name"
+          git config --global user.email "{secret.email}"
+          git config --global user.name "haha4github"
           repo init -u https://android.googlesource.com/platform/manifest -b emu-master-dev --depth=1
           repo sync -vcj 12
       - name: ccache

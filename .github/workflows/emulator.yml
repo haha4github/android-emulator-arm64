@@ -20,7 +20,7 @@ jobs:
           repo init -u https://android.googlesource.com/platform/manifest -b emu-master-dev --depth=1
           repo sync -vcj 12
       - name: ccache
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: |
             ~/.cache/ccache
